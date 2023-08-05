@@ -43,7 +43,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.
+          echo test, and deploy your projects.
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
