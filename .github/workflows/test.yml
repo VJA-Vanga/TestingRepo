@@ -12,8 +12,11 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   #workflow_dispatch:
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -65,3 +68,6 @@ jobs:
           # push: true
           who-to-greet: 'Mona the Octocat'
           # tags: user/app:latest
+
+      - name: Docker Push
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/sivavanga/vja
