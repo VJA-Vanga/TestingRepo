@@ -70,4 +70,4 @@ jobs:
           # tags: user/app:latest
 
       - name: Docker Push
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/vja
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}sivavanga/vja:tagname
