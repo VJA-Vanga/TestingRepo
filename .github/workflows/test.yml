@@ -58,8 +58,10 @@ jobs:
             password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
-        uses: docker/build-push-action@v4
+        uses: actions/hello-world-docker-action@v2
+        # uses: docker/build-push-action@v4
         with:
-          image: sivavanga/vja
-          push: true
-          tags: user/app:latest
+          # image: sivavanga/vja
+          # push: true
+          who-to-greet: 'Mona the Octocat'
+          # tags: user/app:latest
